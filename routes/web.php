@@ -14,3 +14,7 @@
 $app->get('/', function () use ($app) {
     return $app->version();
 });
+
+$app->get('twitter', [
+  'as' => 'twitter', 'uses' => 'ApiController@index'
+]);
